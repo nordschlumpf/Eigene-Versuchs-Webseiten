@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dienstleistung</title>
+        <style>
+            /* Für die Position des Menüs */
+           .dropdown {
+            position: relative;
+            }
+
+            /* Hier wird die Größe und Farbe des Icons bestimmt*/
+            .dropbtn {
+                display: inline-block;
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 4px;
+                user-select: none; /* Verhindert Textmarkierung beim Klicken */
+            }
+
+            /* Hier wird das Aussehens des Menüs bestimmt wenn es ausgeklappt wird */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                right: 0;
+                background-color: white;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+                z-index: 100;
+                margin-top: 5px;
+            }
+
+            /* Hier wird das Aussehen der Einzelnden Links inerhalb des Dropdown Menüs bestimmt */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            /* DIE MAGIE: Wenn die Checkbox aktiviert ist, zeige das nächste Element mit der Klasse .dropdown-content */
+            #menu-toggle:checked ~ .dropdown-content {
+                display: block;
+            }
+
+            .site-footer {
+            background-color: #333; /* Dunkler Hintergrund */
+            color: white;           /* Helle Schrift */
+            padding: 20px 0;        /* Abstand oben und unten */
+            margin-top: 40px;       /* Abstand zum Inhalt darüber */
+            width: 100%;
+            font-size: 14px;        /* Fußnoten sind meist etwas kleiner */
+            }
+
+            .footer-content {
+                max-width: 1000px;      /* Gleiche Breite wie der Hauptinhalt */
+                margin: 0 auto;         /* Zentriert den Inhalt des Footers */
+                display: flex;
+                justify-content: space-between; /* Text links, Links rechts */
+                align-items: center;
+                padding: 0 20px;        /* Kleiner Seitenabstand für Mobile */
+            }
+
+            .footer-nav a {
+                color: #ccc;
+                text-decoration: none;
+                margin-left: 20px;      /* Abstand zwischen den Links */
+                transition: color 0.3s; /* Weicher Übergang beim Hovern */
+            }
+
+            .footer-nav a:hover {
+                color: white;           /* Wird heller beim Drüberfahren */
+                text-decoration: underline;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* Mindestens die volle Bildschirmhöhe */
+                margin: 0;
+            }
+
+            main {
+                flex: 1; /* Dieser Teil wächst und drückt den Footer nach ganz unten */
+            }
+        </style>
+    </head>
+    <body>
+
+        <header style="display: flex; justify-content: flex-end; padding: 20px; background: #333; position: relative; font-family: Arial, Helvetica, sans-serif;">
+            <div class="dropdown">
+
+                <input type="checkbox" id="menu-toggle" style="display: none;">
+        
+                <label for="menu-toggle" class="dropbtn">Menü ▾</label>
+                <div class="dropdown-content">
+                    <a href="startseite.html">Startseite</a>
+                    <a href="kontakt.html">Termin vereinbaren</a>
+                    <a href="ueber_uns.html">Über uns</a>
+                </div>
+            </div>
+        </header>
+
+        <div style="display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; font-family: Arial, Helvetica, sans-serif;">
+
+            <header style="width: 80%; max-width: 800px; text-align: center;">
+                <h1>
+                    Dienstleistungen
+                </h1>
+            </header>
+
+            <main style="width: 80%; max-width: 800px; text-align: center;">
+                <p style="text-align: left;">
+                    <b>Angebot 1: System-Wartungsvertrag "Sorglos-Paket"</b><br>
+                    Beschreibung: Mit unserem "Sorglos-Paket" übernehmen wir die regelmäßige Wartung Ihrer IT-Systeme. Dies beinhaltet proaktive Überwachung, Sicherheitsupdates, Performance-Optimierung und regelmäßige Backups. So minimieren Sie Ausfallzeiten und sorgen für einen reibungslosen Betrieb. <br>
+                </p>
+
+                <p align="center">
+                    <img src="Angebot_1.jpg" alt="System-Wartungsvertrag"><br>
+                </p>
+                
+                <p style="text-align: left;">
+                    <b>Angebot 2: Express-Reparaturservice "Blitzhilfe"</b><br>
+                    Beschreibung: Ihr System streikt? Mit unserem Express-Reparaturservice "Blitzhilfe" sind wir schnell vor Ort oder schalten uns remote auf, um Hard- und Softwareprobleme professionell zu beheben. Egal ob defekte Komponenten, Viren oder Softwarefehler – wir bringen Ihre IT schnell wieder zum Laufen. <br>
+                </p>
+
+                <p align="center">
+                    <img src="Angebot_2.jpg" alt="Express-Reparaturservice">
+                </p>
+
+                <p style="text-align: left;">
+                    <b>Angebot 3: Neuaufbau & Migration "Zukunft jetzt!"</b><br>
+                    Beschreibung: Sie planen, Ihre IT-Infrastruktur zu erneuern oder auf ein neues System umzusteigen? Mit unserem Service "Zukunft jetzt!" unterstützen wir Sie beim kompletten Neuaufbau von Systemen und der Migration bestehender Daten. Wir beraten Sie bei der Auswahl der richtigen Hardware und Software und sorgen für eine reibungslose Implementierung. <br>
+                </p>
+
+                <p align="center">
+                    <img src="Angebot_3.jpg" alt="Neuaufbau & Migration">
+                </p>
+
+                <p style="text-align: left;">
+                    <b>Angebot 4: System-Checkup "Health & Safety"</b><br>
+                    Beschreibung: Vorbeugen ist besser als Heilen! Mit unserem umfassenden System-Checkup unterziehen wir Ihre gesamte IT einer tiefgehenden Analyse. Wir prüfen Festplatten-Gesundheit, Lüfterzustand, Sicherheitslücken und Software-Altlasten. Sie erhalten einen detaillierten Statusbericht und konkrete Handlungsempfehlungen, um Systemausfälle zu verhindern, bevor sie entstehen. <br>
+                </p>
+
+                <p align="center">
+                    <img src="Angebot_5.jpg" alt="System-Checkup">
+                </p>
+
+                <p style="text-align: left;">
+                    <b>Angebot 5: Hardware-Upgrade & Installation "Leistungs-Boost"</b><br>
+                    Beschreibung: Veraltete Hardware bremst Ihre Produktivität. Unser "Leistungs-Boost"-Angebot umfasst die fachgerechte Beratung, Beschaffung und Installation neuer Komponenten – von Arbeitsspeicher über SSDs bis hin zu Grafikkarten und ganzen Rechnern. Wir sorgen dafür, dass Ihre Systeme wieder topaktuell sind und maximale Performance liefern. <br>
+                </p>
+
+                <p align="center">
+                    <img src="Angebot_6.jpg" alt="Hardware-Upgrade & Installation">
+                </p>
+            </main>
+
+        </div>
+
+        <footer class="site-footer" style="font-family: Arial, Helvetica, sans-serif;"> 
+            <div class="footer-content">
+                <p>&copy; 2026 Musterfirma GmbH. Alle Rechte vorbehalten.</p>
+                <nav class="footer-nav">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutzerklärung</a>
+                    <a href="barrierefreiheit.html">Barrierefreiheit</a>
+                </nav>
+            </div>
+        </footer>
+
+    </body>
+</html>

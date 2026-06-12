@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Termin</title>
+        <style>
+            /* Für die Position des Menüs */
+           .dropdown {
+            position: relative;
+            }
+
+            /* Hier wird die Größe und Farbe des Icons bestimmt*/
+            .dropbtn {
+                display: inline-block;
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 4px;
+                user-select: none; /* Verhindert Textmarkierung beim Klicken */
+            }
+
+            /* Hier wird das Aussehens des Menüs bestimmt wenn es ausgeklappt wird */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                right: 0;
+                background-color: white;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+                z-index: 100;
+                margin-top: 5px;
+            }
+
+            /* Hier wird das Aussehen der Einzelnden Links inerhalb des Dropdown Menüs bestimmt */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            /* DIE MAGIE: Wenn die Checkbox aktiviert ist, zeige das nächste Element mit der Klasse .dropdown-content */
+            #menu-toggle:checked ~ .dropdown-content {
+                display: block;
+            }
+
+            .site-footer {
+            background-color: #333; /* Dunkler Hintergrund */
+            color: white;           /* Helle Schrift */
+            padding: 20px 0;        /* Abstand oben und unten */
+            margin-top: 40px;       /* Abstand zum Inhalt darüber */
+            width: 100%;
+            font-size: 14px;        /* Fußnoten sind meist etwas kleiner */
+            }
+
+            .footer-content {
+                max-width: 1000px;      /* Gleiche Breite wie der Hauptinhalt */
+                margin: 0 auto;         /* Zentriert den Inhalt des Footers */
+                display: flex;
+                justify-content: space-between; /* Text links, Links rechts */
+                align-items: center;
+                padding: 0 20px;        /* Kleiner Seitenabstand für Mobile */
+            }
+
+            .footer-nav a {
+                color: #ccc;
+                text-decoration: none;
+                margin-left: 20px;      /* Abstand zwischen den Links */
+                transition: color 0.3s; /* Weicher Übergang beim Hovern */
+            }
+
+            .footer-nav a:hover {
+                color: white;           /* Wird heller beim Drüberfahren */
+                text-decoration: underline;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh; /* Mindestens die volle Bildschirmhöhe */
+                margin: 0;
+            }
+
+            main {
+                flex: 1; /* Dieser Teil wächst und drückt den Footer nach ganz unten */
+            }
+        </style>
+    </head>
+    <body>
+
+        <header style="display: flex; justify-content: flex-end; padding: 20px; background: #333; position: relative; font-family: Arial, Helvetica, sans-serif;">
+            <div class="dropdown">
+
+                <input type="checkbox" id="menu-toggle" style="display: none;">
+        
+                <label for="menu-toggle" class="dropbtn">Menü ▾</label>
+                <div class="dropdown-content">
+                    <a href="startseite.html">Startseite</a>
+                    <a href="dienstleistung.html">Dienstleistungen</a>
+                    <a href="ueber_uns.html">Über uns</a>
+                </div>
+            </div>
+        </header>
+
+        <div style="display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; font-family: Arial, Helvetica, sans-serif;">
+
+            <header style="width: 80%; max-width: 800px; text-align: center;">
+                <h1>
+                    Hier können sie einen Termin vereinbaren
+                </h1>
+                <p>Ob es ich um eine neu Einrichtung ihres Systems oder die Wartung geht hier kriegen einen Termin. Auch wenn sie ein Technisches problem haben helfen wir ihen gerne.</p>
+            </header>
+
+            <main style="width: 80%; max-width: 800px; text-align: center;">
+                <form action="/absenden" method="post">
+
+                    <p align="left">
+                        Neuanfang: <input type="reset" value="neustart">
+                    </p>
+
+                    <p>
+                        Sie haben ein Konto dann können sie sich hier anmelden:
+                    </p>
+
+                    <p>
+                        Benutzername: <input type="text">
+                    </p>
+
+                    <p>
+                        Passwort: <input type="password" name="password">
+                    </p>
+
+                    <p>
+                        <button type="submit" value="Sign in">Anmelden</button>
+                    </p>
+
+                    <p>
+                        Anrede: 
+                        <input type="radio" name="anrede" value="herr" required> Herr
+                        <input type="radio" name="anrede" value="frau"> Frau
+                        <input type="radio" name="anrede" value="divers"> Divers
+                    </p>
+
+                    <p>
+                        Vorname: <input type="text" name="vorname" placeholder="Max" required>
+                    </p>
+
+                    <p>
+                        Nachname: <input type="text" name="nachname" placeholder="Mustermann">
+                    </p>
+
+                    <p>
+                        Dringlichkeit: <input type="range" name="dringlichkeit">
+                    </p>
+
+                    <p>
+                        Termin: <input type="date" name="termin" required>
+                    </p>
+
+                    <p>
+                        Termin: <input type="datetime-local" name="termin" required>
+                    </p>
+
+                    <p>
+                        Zeit: <input type="time" name="zeit">
+                    </p>
+
+                    <p>
+                        Woche: <input type="week" name="woche">
+                    </p>
+
+                    <p>
+                        Monat: <input type="month" name="monat">
+                    </p>
+
+                    <p>
+                        Einzurichtende Systeme: <input type="number" name="system">
+                    </p>
+
+                    <p>
+                        E-Mail: <input type="email" name="email" placeholder="max.muster@gmail.com" required>
+                    </p>
+
+                    <p>
+                        Telefonnummer: <input type="tel" name="telefon">
+                    </p>
+
+                    <p>
+                        <b>Wähle einen Betreff</b><br>
+                        <select name="subject" required>
+                            <option value="">Bitte wählen</option>
+                            <option value="einrichten">System Einrichten</option>
+                            <option value="fehler">Fehler beheben</option>
+                            <option value="service">Wartung</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <textarea name="Nachricht" cols="60" rows="15" placeholder="Gib hier deine Nachricht ein" required></textarea>
+                    </p>
+
+                    <p>
+                        <b>Ein Bild ihres Problems.</b><br>
+                        <input type="file" name="datei">
+                    </p>
+
+                    <p>
+                        Webseiten Link: <input type="url" name="webseite">
+                    </p>
+
+                    <p>
+                        Bild: <input type="image" name="bild" alt="image input">
+                    </p>
+
+                    <p>
+                        <b>Hiermit stimme ich den AGB zu.</b><br>
+                        <input type="checkbox" name="agb" required>
+                    </p>
+
+                    <p>
+                        <button type="submit">Senden</button>
+                    </p>
+
+                    <p>
+                        Farbe: <input type="color" name="farbe">
+                    </p>
+
+                </form>
+            </main>
+
+        </div>
+
+        <footer class="site-footer" style="font-family: Arial, Helvetica, sans-serif;">
+            <div class="footer-content">
+                <p>&copy; 2026 Musterfirma GmbH. Alle Rechte vorbehalten.</p>
+                <nav class="footer-nav">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutzerklärung</a>
+                    <a href="barrierefreiheit.html">Barrierefreiheit</a>
+                </nav>
+            </div>
+        </footer>
+        
+    </body>
+</html>

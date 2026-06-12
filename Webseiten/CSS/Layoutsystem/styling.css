@@ -1,0 +1,76 @@
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-align: center;
+    }
+
+    button {
+        background-color: cornflowerblue;
+        color: white;
+        padding: 4px;
+
+        border: 2px solid silver;
+        border-radius: 6px;
+    }
+
+    textarea {
+        padding: 3px;
+
+        border: 2px solid silver;
+        border-radius: 6px;
+        box-shadow: 5px 5px 20px gray;
+
+    }
+
+    input {
+        padding: 3px;
+
+        border: 2px solid silver;
+        border-radius: 6px;
+
+        
+    }
+
+    select {
+        background-color: white;
+        padding: 3px;
+
+        border: 2px solid silver;
+        border-radius: 6px;
+    }
+
+    input:hover {
+        border-color: rgb(5, 139, 180);
+    }
+
+    textarea:hover {
+        border-color: rgb(5, 139, 180);
+    }
+
+    button:hover { 
+        border-color: black;
+    }
+
+    select:hover {
+        background-color: white;
+        border-color: rgb(5, 139, 180);
+    }
+
+    input:focus {
+    border-color: #6200ee;
+    box-shadow: 0 0 8px rgba(98, 0, 238, 0.2);
+    outline: none; /* Entfernt die Standart umrandung vom Browser */
+    }
+
+    textarea:focus {
+    border-color: #6200ee;
+    box-shadow: 0 0 8px rgba(98, 0, 238, 0.2);
+    outline: none; /* Entfernt die Standart umrandung vom Browser */  
+    }
+
+    select:focus {
+        border-color: #6200ee;
+        box-shadow: 0 0 8px rgba(98, 0, 238, 0.2);
+        outline: none; /* Entfernt die Standart umrandung vom Browser */
+    }
+

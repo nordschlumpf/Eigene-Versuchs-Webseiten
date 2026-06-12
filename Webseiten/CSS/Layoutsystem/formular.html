@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formular</title>
+        <link rel="stylesheet" href="styling.css">
+    </head>
+    <body>
+        
+        <header>
+
+            <h1>Kontaktformular</h1>
+
+            <p>
+                Sie Anliegen dann können sie und hier Kontaktieren. 
+            </p>
+        </header>
+
+        <main>
+
+            <form action="/absenden" method="post">
+
+                <p>
+                    Name: <input type="text" name="name" placeholder="Mustermann" required>
+                </p>
+
+                <p>
+                    Vorname: <input type="text" name="vorname" placeholder="Max" required>
+                </p>
+
+                <p>
+                    E-Mail: <input type="email" name="e-mail" placeholder="max.mustermann@gmail.com" required>
+                </p>
+
+                <p>
+                    <b>Wähle einen Betreff</b><br>
+                    <select name="betreff">
+                        <option value="">Bitte wählen</option>
+                        <option value="problem">Problem melden</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="bestellung">Bestellung</option>
+                    </select>
+                </p>
+
+                <p>
+                    <textarea name="nachricht" cols="70" rows="20" placeholder="Bitte geben sie hier ihre Nachricht ein" required></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Senden</button>
+                </p>
+
+            </form>
+        </main>
+
+    </body>
+</html>

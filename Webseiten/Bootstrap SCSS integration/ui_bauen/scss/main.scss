@@ -1,0 +1,56 @@
+    // 1. EIGENE VARIABLEN (OPTIONAL)
+    // Hier kannst du Bootstrap-Farben überschreiben, BEVOR sie geladen werden.
+    $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    $input-btn-focus-width: 3px;
+
+    // 2. BOOTSTRAP IMPORTIEREN
+    // Dieser Pfad muss zu deinem node_modules Ordner führen.
+    // Meistens liegt dein scss-Ordner parallel zu node_modules, 
+    // daher gehen wir mit ../ einen Schritt raus.
+    @import "../node_modules/bootstrap/scss/bootstrap";
+
+    // 3. DEIN EIGENER ZUSÄTZLICHER CODE
+    // Hier schreibst du alles rein, was nicht über Bootstrap-Variablen geht.
+    body {
+        padding-top: 50px;
+
+        font-family: $font-family-base;
+        -webkit-font-smoothing: antialiased; // Macht Schriften auf dem Mac noch "cleaner"
+        -moz-osx-font-smoothing: grayscale;
+        letter-spacing: -0.01rem; // Ein winziger Tick enger wirkt bei System-Fonts oft edler
+    } 
+
+    [data-bs-theme="dark"] {
+        --bs-body-bg: #1a202c;      // "Midnight" statt Schwarz
+        --bs-body-color: #e2e8f0;   // Cremeweiß statt Reinweiß
+        --bs-primary: #a3bffa;      // Pastell-Blau für den Kontrast
+        --bs-border-color: #2d3748; 
+    }
+
+    .form-control {
+    // Weicher Übergang (Animation)
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border-color: $primary; // Nutzt deine definierte Theme-Farbe
+        background-color: #2d3748; // Wird etwas heller
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); // Subtiler Schatten
+        transform: translateY(-2px); // Ganz leichtes "Anheben"
+    }
+    &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 0.25rem rgba($primary, 0.15); // Weicher Fokus-Ring
+    }
+    }
+
+    label.required::after {
+        content: " *";
+        color: $danger; // Nutzt die rote Bootstrap-Farbe
+        font-weight: bold;
+        margin-left: 4px;
+    }
+
+    .form-select {
+        @extend .form-control; // Übernimmt die Hover-Logik deiner Inputs!
+    }

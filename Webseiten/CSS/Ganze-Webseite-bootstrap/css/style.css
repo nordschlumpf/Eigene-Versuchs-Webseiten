@@ -1,0 +1,95 @@
+    /* 1. Body Styling - Variablen durch Standardwerte ersetzt */
+    body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        letter-spacing: -0.01rem;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    } 
+
+    /* 2. Dark Mode - Hier nutzen wir die echten Bootstrap CSS-Variablen */
+    [data-bs-theme="dark"] {
+        --bs-body-bg: #1a202c;
+        --bs-body-color: #e2e8f0;
+        --bs-primary: #a3bffa;
+        --bs-link-color: #a3bffa; /* Sorgt dafür, dass Links auch hellblau sind */
+        --bs-link-hover-color: #cbd5e0; /* Ein helleres Grau beim Drüberfahren */
+        --bs-border-color: #2d3748;
+    }
+
+    /* pictures aligning in the middle of the webseite*/
+    .pictures {
+        text-align: center;
+    }
+
+    /* so the impressum is a list that has a new line for every Information and not one text block */
+    .impressum {
+        white-space: pre-line !important;
+        text-align: left;
+    }
+
+    /* Wir sprechen den Container an, der Text und Button hält */
+    .navbar .container-fluid {
+        display: flex; /* Aktiviert Flexbox */
+        justify-content: flex-end; /* Schiebt alles nach rechts */
+        align-items: center; /* Zentriert beides vertikal */
+        gap: 10px; /* Erzeugt einen sauberen Abstand zwischen Text und Button */
+    }
+
+    /* Falls der Text "Menü" sich trotzdem noch breit macht: */
+    .navbar-brand {
+        margin-right: 0; /* Entfernt den Standard-Abstand nach rechts */
+        font-size: 1.3rem;
+        text-transform: uppercase; /* Alles in Großbuchstaben wirkt oft moderner */
+        letter-spacing: 1px; /* Etwas mehr Platz zwischen den Buchstaben */
+    }
+
+    /* Damit das ausgeklappte Menü nicht das Layout zerschießt */
+    .navbar-collapse {
+        width: 100%; /* Sorgt dafür, dass das Menü die volle Breite nutzt, wenn es aufklappt */
+        text-align: right; /* Richtet die Links rechtsbündig aus */
+        background-color: rgba(0, 0, 0, 0.8); /* Dunkler Hintergrund für Lesbarkeit */
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    /* Wir sprechen die Liste im ausgeklappten Menü an */
+    .navbar-nav {
+        padding-right: 20px; /* Hier kannst du den Wert anpassen (z.B. 30px oder 50px) */
+    }
+
+    /* Optional: Falls du möchtest, dass die Links beim Drüberfahren 
+    etwas nach links "hüpfen" (schöner Effekt): */
+    .nav-link:hover {
+        padding-right: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .hero-section {
+        /* Pfad zu deinem Bild */
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../pictures/banner_Bild.jpg');
+        background-size: cover;
+        background-position: center;
+        
+        /* Höhe: 100vh füllt den ganzen Bildschirm, 70vh ist ein schöner Banner-Effekt */
+        height: 70vh; 
+        width: 100%;
+        
+        /* Wichtig: Damit das d-flex Center im HTML funktioniert */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Navbar Tuning */
+    .navbar {
+        /* Absolut oben im Header positionieren */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        /* Damit sie wirklich durchsichtig ist */
+        background-color: transparent !important; 
+    }

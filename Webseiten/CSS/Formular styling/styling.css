@@ -1,0 +1,101 @@
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-align: center;
+    }
+
+    button {
+        background-color: cornflowerblue;
+        color: white;
+        padding: 4px;
+
+        border: 2px solid silver;
+        border-radius: 6px;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 600px;
+        height: 300px;
+
+        padding: 10px;
+
+        border: 2px solid silver;
+        border-radius: 6px;
+        box-shadow: 5px 5px 20px gray;
+        box-sizing: border-box;
+    }
+
+    input {
+        width: 100%;
+        max-width: 190px;
+
+        padding: 3px;
+
+        border: 2px solid silver;
+        border-radius: 6px;
+    }
+
+    .input-select {
+        display: block;      /* Block-Element, damit margin: auto greift */
+        margin: 0 auto;      /* Zentriert das Feld horizontal auf der Seite */
+        
+        width: 100%;
+        max-width: 250px;
+        
+        text-align: center;  /* Zentriert den geschriebenen Text im Feld */
+    }
+
+    select {
+        width: 100%;
+        max-width: 100px;
+
+        background-color: white;
+        padding: 3px;
+
+        border: 2px solid silver;
+        border-radius: 6px;
+    }
+
+    fieldset {
+        border: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    input:hover {
+        border-color: rgb(5, 139, 180);
+    }
+
+    input:focus {
+        background-color: darkgray;
+        border-color: #6200ee;
+        box-shadow: 0 0 8px rgba(98, 0, 238, 0.2);
+        outline: none; /* Entfernt die Standart umrandung vom Browser */
+    }
+
+    textarea:hover {
+        border-color: rgb(5, 139, 180);
+    }
+
+    textarea:focus {
+        background-color: darkgray;
+        border-color: #6200ee;
+        box-shadow: 0 0 8px rgba(98, 0, 238, 0.2);
+        outline: none; /* Entfernt die Standart umrandung vom Browser */  
+    }
+
+    button:hover { 
+        border-color: black;
+    }
+
+    select:hover {
+        background-color: white;
+        border-color: rgb(5, 139, 180);
+    }
+    
+    select:focus {
+        border-color: #6200ee;
+        box-shadow: 0 0 8px rgba(98, 0, 238, 0.2);
+        outline: none; /* Entfernt die Standart umrandung vom Browser */
+    }

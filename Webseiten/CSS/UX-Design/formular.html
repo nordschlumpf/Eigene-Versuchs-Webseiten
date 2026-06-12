@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formular</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body data-bs-theme="dark">
+
+        <div class="container text-center">
+            <div class="mx-auto p-2 col-md-8 col-lg-6">
+                <h1>Kontaktformular</h1>
+
+                <p>Hier können sie ihre Bestellung aufgeben</p>
+            </div>
+            <form class="row gy-3" style="text-align: left;" autocomplete="off">
+                <p class="text-secondary small">
+                    <span class="text-danger">*</span> Pflichtfelder
+                </p>
+                <fieldset>
+                    <div class="fs-5 fw-bold mb-3 d-block">Persönliche Angaben</div>
+                    <div class="col-6 mb-3">
+                        <label for="name" class="form-label required">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Mustermann" required>
+                    </div> 
+                    <div class="col-6 mb-3">
+                        <label for="vorname" class="form-label required">Vorname</label>
+                        <input type="text" class="form-control" id="vorname" placeholder="Max" required>
+                    </div> 
+                    <div class="col-6 mb-3">
+                        <label for="telefon" class="form-label">Telefonnummer</label>
+                        <input type="tel" class="form-control" id="telefon">
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="email" class="form-label required">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="max.mustermann@gmail.com" required>
+                        <div class="invalid-feedback">
+                            Bitte gib eine echte E-Mail-Adresse an (z. B. name@beispiel.de).
+                        </div>
+                    </div> 
+                </fieldset>
+                <fieldset>
+                    <div class="fs-5 fw-bold mb-3 d-block">Adresse</div>
+                    <div class="col-6 mb-3">
+                        <label for="adresse" class="form-label required">Adresse</label>
+                        <input type="text" class="form-control" id="adresse" placeholder="Max-musterstraße 1" required>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-1 mb-3">
+                            <label for="plz" class="form-label required">Postleitzahl</label>
+                            <input type="text" inputmode="numeric" class="form-control" pattern="\d{5}" placeholder="12345" id="plz" required>
+                            <div class="valid-feedback">
+                                Sieht gut aus!
+                            </div>
+                        </div>
+                        <div class="col-md-5 mb-3">
+                            <label for="inputCity" class="form-label required">Stadt</label>
+                            <input type="text" class="form-control" id="inputCity" required>
+                        </div>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <label for="inputState" class="form-label">Bundesland</label>
+                        <select id="inputState" class="form-select">
+                        <option selected>Bitte wählen...</option>
+                        <option value="BW">Baden-Württemberg</option>
+                        <option value="BY">Bayern</option>
+                        <option value="BE">Berlin</option>
+                        <option value="BB">Brandenburg</option>
+                        <option value="HB">Bremen</option>
+                        <option value="HH">Hamburg</option>
+                        <option value="HE">Hessen</option>
+                        <option value="MV">Mecklenburg-Vorpommern</option>
+                        <option value="NI">Niedersachsen</option>
+                        <option value="NW">Nordrhein-Westfalen</option>
+                        <option value="RP">Rheinland-Pfalz</option>
+                        <option value="SL">Saarland</option>
+                        <option value="SN">Sachsen</option>
+                        <option value="ST">Sachsen-Anhalt</option>
+                        <option value="SH">Schleswig-Holstein</option>
+                        <option value="TH">Thüringen</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div class="mb-3">
+                    <label for="floatingTextarea2" class="form-label">Lieferanweisungen</label>
+                    <textarea class="form-control" id="floatingTextarea2" placeholder="Spezielle Anweisungen für die Bestellung..." style="height: 300px"></textarea>
+                </div>
+                <div class="form-text text-info">
+                    <i class="bi bi-info-circle">Wir antworten innerhalb von 24h</i>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto mb-5">
+                    <button type="button" class="btn btn-outline-primary">Absenden</button>
+                </div>
+            </form>
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripte.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,64 @@
+    /* 1. Body Styling - Variablen durch Standardwerte ersetzt */
+    body {
+        padding-top: 50px;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        letter-spacing: -0.01rem;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    } 
+
+    /* 2. Dark Mode - Hier nutzen wir die echten Bootstrap CSS-Variablen */
+    [data-bs-theme="dark"] {
+        --bs-body-bg: #1a202c;
+        --bs-body-color: #e2e8f0;
+        --bs-primary: #a3bffa;
+        --bs-border-color: #2d3748;
+    }
+
+    /* 3. Form Control - Verschachtelung aufgelöst */
+    .form-control {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .form-control:hover {
+        border-color: var(--bs-primary); /* Nutzt die CSS-Variable von oben */
+        background-color: #2d3748;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transform: translateY(-2px);
+    }
+
+    .form-control:focus {
+        border-color: var(--bs-primary);
+        box-shadow: 0 0 0 0.25rem rgba(163, 191, 250, 0.25);
+    }
+
+    /* 4. Pflichtfelder */
+    label.required::after {
+        content: " *";
+        color: #dc3545; /* Das Bootstrap-Rot direkt als Farbwert */
+        font-weight: bold;
+        margin-left: 4px;
+    }
+
+    /* 5. Select-Felder - Manuelle Zuweisung statt @extend */
+    .form-select {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .form-select:hover {
+        border-color: var(--bs-primary);
+        background-color: #2d3748;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transform: translateY(-2px);
+    }
+
+    :root {
+    /* Das überschreibt den Wert global für Bootstrap-Elemente */
+    --bs-focus-ring-width: 3px;
+    }
+
+    /* Falls du es ganz spezifisch für Eingabefelder willst: */
+    .form-control:focus {
+        box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+    }

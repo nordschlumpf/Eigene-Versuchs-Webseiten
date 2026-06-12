@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Termin</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style_kontakt.css">
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+
+        <header class="hero-section">
+            <nav class="navbar bg-dark" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Menü</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="startseite.html">Startseite</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="dienstleistung.html">Dienstleistungen</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="ueber_uns.html">Über uns</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container h-100 d-flex align-items-center justify-content-center">
+                <div class="text-center text-white">
+                    <h1 class="display-3 fw-bold">Willkommen bei uns</h1>
+                    <p class="lead">Ihr IT Unternehmen des Vetrauens.</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-grow-1 py-5">
+            <div class="container text-center mb-5">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="display-5">Hier können Sie einen Termin vereinbaren</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <form>
+                            <div class="mb-5">
+                                <p class="small text-secondary mb-3">Sie haben schon ein Konto, dann können sie sich hier Anmelden.</p>
+                                
+                                <div class="row gy-2 gx-3 align-items-center">
+                                    <div class="col-auto">
+                                        <label class="visually-hidden" for="benutzername">Benutzername</label>
+                                        <input type="text" class="form-control" id="benutzername" placeholder="Benutzername">
+                                    </div>
+                                    <div class="col-auto">
+                                        <label class="visually-hidden" for="passwort">Passwort</label>
+                                        <input type="password" class="form-control" id="passwort" placeholder="Passwort">
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-outline-info">Anmelden</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <form class="row g-3">
+                            <div class="mb-5">
+                                <p class="small text-secondary mb-3">Wenn sie als Gast bestellen bitte hier ihre Informationen eingeben.</p>
+                                <div class="row gy-2 gx-3 align-items-center">
+                                    <div class="col-auto">
+                                        <label class="visually-hidden" for="anrede">Anrede</label>
+                                        <select class="form-select" id="anrede">
+                                            <option selected>Anrede...</option>
+                                            <option value="1">Herr</option>
+                                            <option value="2">Frau</option>
+                                            <option value="3">Divers</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-auto">
+                                        <label class="visually-hidden" for="vorname">Vorname</label>
+                                        <input type="text" class="form-control" id="vorname" placeholder="Vorname">
+                                    </div>
+                                    <div class="col-auto">
+                                        <label class="visually-hidden" for="nachname">Nachname</label>
+                                        <input type="text" class="form-control" id="nachname" placeholder="Nachname">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="zufriedenheitRange" class="form-label">Wie dringlich ist ihr Anliegen? (1-10)</label>
+                                <input type="range" class="form-range" min="1" max="10" step="1" id="zufriedenheitRange">
+                                <div class="d-flex justify-content-between small text-secondary">
+                                    <span>1</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="date" class="form-label">Termin</label>
+                                <input type="date" class="form-control" id="date">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="datetime" class="form-label">Termin</label>
+                                <input type="datetime-local" class="form-control" id="datetime">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="time" class="form-label">Zeit</label>
+                                <input type="time" class="form-control" id="time">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="week" class="form-label">Woche</label>
+                                <input type="week" class="form-control" id="week">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="months" class="form-label">Monat</label>
+                                <input type="month" class="form-control" id="months">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="number" class="form-label">Einzurichtende Systeme</label>
+                                <input type="number" class="form-control" id="number">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="telefon" class="form-label">Telefonnummer</label>
+                                <input type="tel" class="form-control" id="telefon">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="betreff" class="form-label">Wähle einen Betreff</label>
+                                <select id="betreff" class="form-select">
+                                <option value="">Bitte wählen</option>
+                                <option value="einrichten">System Einrichten</option>
+                                <option value="fehler">Fehler beheben</option>
+                                <option value="service">Wartung</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="floatingTextarea2" class="form-label">Nachricht</label>
+                                <textarea class="form-control" placeholder="Gib hier deine Nachricht ein" id="floatingTextarea2" style="height: 300px"></textarea>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="pictures" class="form-label">Ein Bild ihres Problems.</label>
+                                <input type="file" class="form-control" id="pictures">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="link" class="form-label">Webseiten Link</label>
+                                <input type="url" class="form-control" id="link">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="image" class="form-label">Bild</label>
+                                <input type="image" name="bild" alt="image input" class="form-control" id="image">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="color" class="form-label">Farbe</label>
+                                <input type="color" class="form-control" id="color">
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-outline-info">Absenden</button>
+                            </div>
+                            <div class="col-12">
+                                <button type="reset" class="btn btn-outline-info">Neustart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-dark text-light py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <img src="pictures/Firmen_Logo.png" alt="Logo" class="mb-3" style="height: 50px;">
+                        <h5>Musterfirma GmbH</h5>
+                        <p class="small text-muted">
+                            Ihr IT-Partner für innovative Lösungen. Wir begleiten Sie sicher durch die digitale Transformation.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h5 class="mb-3">Quicklinks</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="datenschutz.html" class="text-light text-decoration-none small">Datenschutz</a></li>
+                            <li><a href="impressum.html" class="text-light text-decoration-none small">Impressum</a></li>
+                            <li><a href="barrierefreiheit.html" class="text-light text-decoration-none small">Barrierefreiheit</a></li>
+                            <li><a href="kontakt.html" class="text-light text-decoration-none small">Kontakt</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h5 class="mb-3">Newsletter</h5>
+                        <form>
+                            <div class="mb-2">
+                                <input type="email" class="form-control form-control-sm" placeholder="Ihre E-Mail" required>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="newsCheck" required>
+                                <label class="form-check-label small text-muted" for="newsCheck">
+                                    Ich akzeptiere die <a href="datenschutz.html" class="text-light">Datenschutzbestimmungen</a>.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-outline-light btn-sm w-100">Anmelden</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <hr class="mt-4 mb-3 border-secondary">
+                
+                <div class="text-center">
+                    <p class="small mb-0">&copy; 2026 Musterfirma GmbH. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        
+    </body>
+</html>

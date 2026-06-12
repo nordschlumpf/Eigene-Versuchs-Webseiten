@@ -1,0 +1,117 @@
+
+    /* Hier werden ein paar Globale Parameter festgelegt. Damit das nicht für jeden einzelden Code Block gemacht werden muss */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f0ead6;
+        color: #333333;
+        line-height: 1.6;
+        text-align: center;
+        width: 100%;
+        white-space: pre-line;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    h1 {
+        color: tomato;
+    }
+
+    h2 {
+        color: chocolate;
+        text-align: center;
+    }
+
+    h3 {
+        color: coral;
+    }
+
+    /* Damit die Textblöcke Links Bündig sind zum besserren lesen */ 
+    .header {
+        width: 80%;
+        max-width: 650px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: left;
+        padding-left: 60px;
+
+        background-color: white;
+        
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 15px; 
+
+        box-shadow: 5px 5px 20px gray;
+    }
+
+    /* Damit die Textblöcke Links Bündig sind zum besserren lesen */ 
+    .main {
+        width: 80%;
+        max-width: 650px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-left: 60px;
+
+        background-color: white;
+        
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 15px; 
+
+        box-shadow: 5px 5px 20px gray;
+    }
+
+    /* Damit die Textblöcke Links Bündig sind zum besserren lesen */ 
+    .zutaten {
+        width: 80%;
+        max-width: 650px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: left;
+
+        background-color: white;
+        
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 15px; 
+
+        box-shadow: 5px 5px 20px gray;
+    }
+
+    .zubereitung {
+        width: 80%;
+        max-width: 650px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: left;
+        padding-left: 60px;
+
+        background-color: white;
+        
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 15px; 
+
+        box-shadow: 5px 5px 20px gray;
+    }
+
+    .mittig-positioniert {
+        text-align: center;
+    }
+
+    .liste {
+        list-style-type: none;
+    }
+
+    .zutaten-liste {
+        padding-left: 119px;
+    }

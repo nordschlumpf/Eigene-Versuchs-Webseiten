@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kontakt</title>
+    </head>
+    <body>
+
+        <table width="600" align="center" border="0">
+            <tr>
+                <td>
+                    <center>
+                        <h1>Schreib mir eine Nachricht</h1>
+
+                        <p>Ob Feedback, Fragen oder einfach nur ein nettes „Hallo“ – ich freue mich über jede Nachricht. Schieß los!</p>
+
+                        <!--Durch die action kann man die E-mails auch verschicken-->
+                        <form action="https://formspree.io/f/meekrbjw" method="POST">
+
+                            <p>
+                                Vorname: <input type="text" name="vorname" placeholder="Max" required>
+                            </p>
+
+                            <p>
+                                Nachname: <input type="text" name="nachname" placeholder="Mustermann">
+                            </p>
+
+                            <p>
+                                E-Mail: <input type="email" name="email" placeholder="max.muster@gmail.com" required>
+                            </p>
+
+                            <p>
+                                <b>Wähle einen Betreff</b><br>
+                                <select name="subject">
+                                    <option value="allgemein">Algemeine Frage</option>
+                                    <option value="Feedback">Feedback</option>
+                                    <option value="lob">Lob und Kritik</option>
+                                    <option value="sonstiges">Sonstiges</option>
+                                </select>
+                            </p>
+
+                            <textarea name="Nachricht" cols="60" rows="15" placeholder="Gib hier deine Nachricht ein" required></textarea>
+
+                            <p>
+                                <button type="submit">Senden</button>
+                            </p>
+
+                        </form>
+
+                    </center>
+                </td>
+            </tr>
+        </table>
+        
+    </body>
+</html>
